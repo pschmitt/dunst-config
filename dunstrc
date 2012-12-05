@@ -7,7 +7,7 @@
     #   %b  body
     #   %i  iconname (including its path)
     #   %I  iconname (without its path)
-    format = "%s %b"
+    format = "%a: %s %b"
 
     # Sort messages by urgency
     sort = yes
@@ -17,7 +17,7 @@
 
     # alignment of message text.
     # Possible values are "left", "center" and "right"
-    alignment = left
+    alignment = right 
 
     # The frequency with wich text that is longer than the notification
     # window allows bounces back and forth.
@@ -54,7 +54,7 @@
     idle_threshold = 120
 
     # Which monitor should the notifications be displayed on.
-    monitor = 1 
+    # monitor = 1 
 
     # Display notification on focused monitor. Possible modes are:
     # mouse: follow mouse pointer
@@ -131,6 +131,13 @@
 # NOTE: if you don't want a notification to be displayed, set the format to ""
 # NOTE: It might be helpful to run dunst -print in a terminal in order to find
 # fitting options for rules.
+
+[irssi]
+    appname = "irssi"
+    format  = "%s: %b"
+    urgency = low
+    background = "#000000"
+    foreground = "#0A0"
 
 #[ignore]
 ## This notification will not be displayed
