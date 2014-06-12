@@ -1,5 +1,5 @@
 [global]
-    font = Monospace-12
+    font = "monospace 18"
 
     # The format of the message. Possible variables are:
     #   %a  appname
@@ -17,13 +17,13 @@
 
     # alignment of message text.
     # Possible values are "left", "center" and "right"
-    alignment = right 
+    alignment = right
 
     # The frequency with wich text that is longer than the notification
     # window allows bounces back and forth.
     # This option conflicts with 'word_wrap'.
     # Set to 0 to disable
-    bounce_freq = 0
+    bounce_freq = 10
 
     # show age of message if message is older than show_age_threshold seconds.
     # set to -1 to disable
@@ -54,7 +54,7 @@
     idle_threshold = 120
 
     # Which monitor should the notifications be displayed on.
-    # monitor = 1 
+    # monitor = 1
 
     # Display notification on focused monitor. Possible modes are:
     # mouse: follow mouse pointer
@@ -70,12 +70,12 @@
 
     # should a notification popped up from history be sticky or
     # timeout as if it would normally do.
-    sticky_history = yes
+    sticky_history = no
 
     # The height of a single line. If the height is smaller than the font height,
     # it will get raised to the font height.
     # This adds empty space above and under the text.
-    line_height = 0
+    line_height = 20
 
     # Draw a line of 'separatpr_height' pixel height between two notifications.
     # Set to 0 to disable
@@ -108,7 +108,7 @@
     # Otherwise the '#' and following  would be interpreted as a comment.
     background = "#171717"
     foreground = "#FFFFFF"
-    timeout = 10
+    timeout = 5
 
 [urgency_normal]
     background = "#202020"
@@ -118,7 +118,7 @@
 [urgency_critical]
     background = "#A90000"
     foreground = "#000000"
-    timeout = 0
+    timeout = 30
 
 
 # Every section that isn't one of the above is interpreted as a rules
@@ -138,6 +138,11 @@
     urgency = low
     background = "#000000"
     foreground = "#0A0"
+
+[mpdw.sh]
+    appname = "mpdw.sh"
+    urgency = low
+    #timeout = 0.25
 
 #[ignore]
 ## This notification will not be displayed
@@ -164,3 +169,5 @@
 #    summary = *twitter.com*
 #    urgency = normal
 #
+
+# vim: ft=sh
